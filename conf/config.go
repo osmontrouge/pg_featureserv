@@ -26,7 +26,7 @@ var Configuration Config
 
 func setDefaultConfig() {
 	viper.SetDefault("Server.HttpHost", "0.0.0.0")
-	viper.SetDefault("Server.HttpPort", 9000)
+	viper.SetDefault("Server.HttpPort", os.Getenv("PORT"))
 	viper.SetDefault("Server.UrlBase", "")
 	viper.SetDefault("Server.CORSOrigins", "*")
 	viper.SetDefault("Server.Debug", false)
